@@ -20,4 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('pedido', App\Http\Controllers\PedidosController::class);
+Route::apiResource('usuarios', App\Http\Controllers\UsuariosController::class);
