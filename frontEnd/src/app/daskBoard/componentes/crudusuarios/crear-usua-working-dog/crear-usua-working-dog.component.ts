@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Usuarios } from 'src/app/core/modelos/usuarios/Usuarios.modelo';
 
 import { UsuariosService } from 'src/app/core/services/usuarios.service';
 
@@ -41,13 +42,16 @@ export class CrearUsuaWorkingDogComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   guardar() {
-      this.usuarios.editUsuarios();
-
+    const  upUsu: Partial<Usuarios> = this.usuarios.usu;
+    this.usuarios.editUsuarios(this.usuarios.usu.id, upUsu).subscribe();
+    this.rout.navigate(['/listaUsuarios']);
   }
 
   // tslint:disable-next-line:typedef
   create(){
-    this.usuarios.createUsu();
+    this.usuarios.createUsu(this.newUsu.value)
+      .subscribe(
+        u => console.log(u));
     this.rout.navigate(['/listaUsuarios']);
-  }
+      }
 }

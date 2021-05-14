@@ -55,7 +55,7 @@ export class ListaClientesComponent implements OnInit {
 
 
   openMoldal(
-    id: string, nombre: string,
+    id: number, nombre: string,
     apellido: string, cedula: number,
     telefono: number, edad: number
   ): void {

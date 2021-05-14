@@ -31,7 +31,8 @@ export class ModalDeleteUComponent implements OnInit {
   // tslint:disable-next-line:typedef
   deleteCostumer(id: number) {
     console.log('se dio clic en delete', id);
-    this.usuariosW.deleteUsuario(id);
+    this.usuariosW.deleteUsuario(id)
+      .subscribe();
     this.dialogRef.close(true);
   }
   close(): void {

@@ -8,12 +8,12 @@ import { Usuarios } from '../modelos/usuarios/Usuarios.modelo';
 export class UsuariosService {
 
   public usu = {
-    id: null,
+    id: 0,
     nombre: '',
     apellido: '',
-    cedula: '',
-    telefono: null,
-    edad: '',
+    cedula: 0,
+    telefono: 0,
+    edad: 0,
   };
 
 
@@ -25,15 +25,16 @@ export class UsuariosService {
   }
 
   // tslint:disable-next-line:typedef
-  createUsu() {
+  createUsu(usuario: Usuarios) {
+   return  this.httpC.post('http://127.0.0.1:8000/api/usuarios', usuario);
   }
   // tslint:disable-next-line:typedef
-  deleteUsuario(id: any) {
-    return this.httpC.delete('http://127.0.0.1:8000/api/usuarios/' + id);
+  deleteUsuario(id: number) {
+    return this.httpC.delete(`http://127.0.0.1:8000/api/usuarios/${id}` );
   }
 
   // tslint:disable-next-line:typedef
-  editUsuarios() {
-    console.log('editando Usu');
+  editUsuarios(id: number, changes: Partial<Usuarios>) {
+    return this.httpC.put(`http://127.0.0.1:8000/api/usuarios/${id}`, changes);
     }
 }

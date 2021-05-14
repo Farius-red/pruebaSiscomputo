@@ -32,7 +32,7 @@
             </div>
             <div id="crud" class="card-footer">
               <div class="text-right">
-                
+
                 <button class="btn btn-sm btn-danger"
                   (click)="openMoldal(usu.id, usu.nombre, usu.apellido, usu.cedula, usu.telefono, usu.edad)">
                   <i class="fas fa-trash-alt">eliminar</i>
@@ -40,7 +40,7 @@
                 <!-- Modal -->
 
 
-                <a [routerLink]="['/adminWorkingDog/crearUsuario',usu.id]"
+                <a [routerLink]="['/crearUsuario',usu.id]"
                   (click)="updateCostumer(usu)" class="btn btn-sm btn-warning">
                   <i class="fas fa-pencil-alt">editar</i>
                 </a>
