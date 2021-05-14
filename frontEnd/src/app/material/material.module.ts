@@ -17,6 +17,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [],
@@ -37,7 +42,19 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatDialogModule
+    MatDialogModule,
+
+    MatSelectModule,
+    MatRadioModule,
+
+    MatBadgeModule,
+
+
+
+    MatTreeModule,
+
+    MatSnackBarModule,
+
   ],
   exports: [
     MatGridListModule,
@@ -55,6 +72,16 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatSelectModule,
+    MatRadioModule,
+
+    MatBadgeModule,
+
+
+
+    MatTreeModule,
+
+    MatSnackBarModule,
   ],
 })
 export class MaterialModule { }

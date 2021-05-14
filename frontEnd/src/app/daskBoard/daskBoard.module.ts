@@ -8,19 +8,42 @@ import { MaterialModule } from '../material/material.module';
 import { NavegacionComponent } from './componentes/navegacion/navegacion.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CuerpoComponent } from './componentes/cuerpo/cuerpo.component';
-import { PedidosComponent } from './componentes/pedidos/pedidos.component';
 
-import { ModalverMasComponent } from './componentes/modalver-mas/modalver-mas.component';
+
+
+import { ModalDeleteUComponent } from './componentes/crudusuarios/modal-delete-u/modal-delete-u.component';
+import { ConfirmacionComponent } from './componentes/crudusuarios/confirmacion/confirmacion.component';
+import { CrearUsuaWorkingDogComponent } from './componentes/crudusuarios/crear-usua-working-dog/crear-usua-working-dog.component';
+import { ListaClientesComponent } from './componentes/crudusuarios/lista-clientes/lista-clientes.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
-  declarations: [IndexPortafolioComponent, NavegacionComponent, FooterComponent, CuerpoComponent, PedidosComponent, ModalverMasComponent],
+  declarations: [
+    IndexPortafolioComponent,
+    NavegacionComponent,
+    FooterComponent,
+
+    CuerpoComponent,
+    ConfirmacionComponent,
+    CrearUsuaWorkingDogComponent,
+    ListaClientesComponent,
+
+    // modales
+    ModalDeleteUComponent,
+    ConfirmacionComponent,
+
+
+  ],
   imports: [
     CommonModule,
     IndexPortafolioRoutingModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [],
-  entryComponents: [ ModalverMasComponent ],
+  entryComponents: [ModalDeleteUComponent, ConfirmacionComponent],
 })
-export class DaskBoardModule {}
+export class DaskBoardModule { }
